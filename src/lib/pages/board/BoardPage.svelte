@@ -17,6 +17,7 @@
   import AddPageMenu from './components/AddPageMenu.svelte';
   import AddPageOptions from './components/AddPageOptions.svelte';
   import FreeWidgets from './components/FreeWidgets.svelte';
+  import Shade from './components/Shade.svelte';
   import Task from '../tasks/components/Task.svelte';
   import TaskDialog from '../tasks/components/TaskDialog.svelte';
   import { priorityOf } from '../tasks/list.svelte.js';
@@ -689,6 +690,7 @@
 
 
 <main class="board-page">
+  <Shade />
   <PageHeader {page}>
     {#snippet actions()}
       <AddPageMenu {board} onAdded={scrollToEnd} bind:open={addMenuOpen} />
@@ -808,6 +810,7 @@
 
 <style>
   .board-page {
+    position: relative;
     box-sizing: border-box;
     height: 100vh;
     display: flex;
@@ -817,13 +820,6 @@
     /* Shape of a task card and the space between tasks, like on a Tasks page. */
     --task-radius: 22px;
     --task-gap: 14px;
-  }
-
-  /* The board page never scrolls up or down, so the space kept for the window's scrollbar (global.css) would only
-     cut the board off at the window's edges. */
-  :global(html:has(.board-page)),
-  :global(body:has(.board-page)) {
-    scrollbar-gutter: auto;
   }
 
   /* Keeps the title clear of the menu button. Below 741px the header has its own layout for that. */

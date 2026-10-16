@@ -235,9 +235,9 @@
     <span
       class="edit-btn m3-icon"
       class:editing={isEditing}
-      title={advanced ? "Open Task" : undefined}
+      title={advanced ? "Edit Task" : undefined}
       in:fade={swapFade}
-      onclick={advanced && onOpen ? (/** @type {MouseEvent} */ event) => (event.preventDefault(), onOpen()) : handleEdit}>{advanced ? "open_in_new" : isEditing ? "check" : "edit_square"}</span>
+      onclick={advanced && onOpen ? (/** @type {MouseEvent} */ event) => (event.preventDefault(), onOpen()) : handleEdit}>{advanced || !isEditing ? "edit_square" : "check"}</span>
   {/key}
   {#if isHistory && !isEditing}
     <!-- svelte-ignore a11y_click_events_have_key_events -->

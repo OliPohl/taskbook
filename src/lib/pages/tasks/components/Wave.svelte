@@ -74,7 +74,8 @@ ontransitionend={() => isTransitioning = false}
 bind:this={waveContainerEl}
 >
   <svg viewBox="0 0 {width} {height}" preserveAspectRatio="none">
-		<path d={path} style:fill="var(--wave)" />
+		<!-- Most of the wave color, mixed with the background (not see-through, tasks scroll under the wave). -->
+		<path d={path} style:fill="color-mix(in srgb, var(--wave) 75%, var(--bg))" />
 	</svg>
 </div>
 

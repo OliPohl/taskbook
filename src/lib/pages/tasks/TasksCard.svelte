@@ -16,7 +16,7 @@
   // svelte-ignore state_referenced_locally
   const list = getListStore(page.id);
 
-  /** The popup is open for the current task. Kept by the dashboard, the "Open task" key opens it too. */
+  /** The popup is open for the current task. Kept by the dashboard, the "Edit task" key opens it too. */
   let open = $derived(dashboard.openTaskPage === page.id);
 
   /** @param {boolean} value */

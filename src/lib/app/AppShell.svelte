@@ -15,6 +15,7 @@
   import { confirmState } from './confirm.svelte.js';
   import SettingsDialog from './SettingsDialog.svelte';
   import Grain from '../ui/Grain.svelte';
+  import Scrollbars from './Scrollbars.svelte';
   import { dashboard } from './dashboard.svelte.js';
   import { folders } from './folders.svelte.js';
   import { settings } from './settings.svelte.js';
@@ -147,6 +148,7 @@
 
     <Sidebar />
     <MenuButton />
+    <Scrollbars />
 
     {#if settings.dialogOpen}
       <SettingsDialog />

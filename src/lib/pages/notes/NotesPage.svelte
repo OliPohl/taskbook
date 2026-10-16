@@ -6,6 +6,7 @@
 <script>
   import { onMount } from 'svelte';
   import PageHeader from '$lib/app/PageHeader.svelte';
+  import Dots from './Dots.svelte';
   import { dragScroll } from '$lib/utils/dragScroll.js';
   import { getNote } from './store.svelte.js';
   import { createEditor, applyChange } from './editor/editor.js';
@@ -105,6 +106,7 @@
 <svelte:body {@attach dragScroll()} />
 
 <main class="notes-page">
+  <Dots />
   <PageHeader {page} />
 
   <div class="note">

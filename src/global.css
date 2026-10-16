@@ -206,14 +206,20 @@ textarea:not(:disabled),
 
 html, body {
   scrollbar-color: #494949 transparent;
-  scrollbar-width: thin; 
-  
-  scrollbar-gutter: stable both-edges;
+  scrollbar-width: thin;
 }
 
-/* Touch screens have overlay scrollbars, no space is kept for them. */
-@media (pointer: coarse) {
-  html, body {
-    scrollbar-gutter: auto;
+/* Without a touch screen every scrollbar floats over what scrolls (app/Scrollbars.svelte), the browser's would take space of
+   their own. Touch screens keep the browser's, they already float. */
+@media (pointer: fine), (pointer: none) {
+  /* html and body by name too, so this wins over the `html, body` rule above. */
+  *,
+  html,
+  body {
+    scrollbar-width: none;
+  }
+
+  *::-webkit-scrollbar {
+    display: none;
   }
 }

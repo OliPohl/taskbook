@@ -37,7 +37,7 @@ export const ACTIONS = [
   { id: 'newTask', label: 'New task', group: 'tasks', keys: ['N'] },
   { id: 'nextTask', label: 'Next task', group: 'tasks', keys: ['J', 'ArrowDown'] },
   { id: 'previousTask', label: 'Previous task', group: 'tasks', keys: ['K', 'ArrowUp'] },
-  { id: 'openTask', label: 'Open task', group: 'tasks', keys: ['Enter', 'E'] },
+  { id: 'openTask', label: 'Edit task', group: 'tasks', keys: ['Enter', 'E'] },
   { id: 'selectTask', label: 'Make current task', group: 'tasks', keys: ['Space'] },
   { id: 'completeTask', label: 'Complete task', group: 'tasks', keys: ['Shift+C'] },
   { id: 'completeCurrentTask', label: 'Complete current task', group: 'tasks', keys: ['C'] },
