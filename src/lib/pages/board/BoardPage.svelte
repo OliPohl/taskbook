@@ -17,7 +17,7 @@
   import AddPageMenu from './components/AddPageMenu.svelte';
   import AddPageOptions from './components/AddPageOptions.svelte';
   import FreeWidgets from './components/FreeWidgets.svelte';
-  import Shade from './components/Shade.svelte';
+  import Streaks from './components/Streaks.svelte';
   import Task from '../tasks/components/Task.svelte';
   import TaskDialog from '../tasks/components/TaskDialog.svelte';
   import { priorityOf } from '../tasks/list.svelte.js';
@@ -690,7 +690,7 @@
 
 
 <main class="board-page">
-  <Shade />
+  <Streaks />
   <PageHeader {page}>
     {#snippet actions()}
       <AddPageMenu {board} onAdded={scrollToEnd} bind:open={addMenuOpen} />

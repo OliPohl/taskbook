@@ -9,6 +9,7 @@
   import { dashboard } from '../../app/dashboard.svelte.js';
   import { folders } from '../../app/folders.svelte.js';
   import FolderStyle from '../../app/FolderStyle.svelte';
+  import Shards from '../dashboard/Shards.svelte';
 
   const TABS = /** @type {const} */ ([
     { key: 'page', label: 'Page', icon: 'description', defaultName: 'New Page' },
@@ -105,6 +106,7 @@
 </script>
 
 <main class="new-page">
+  <Shards />
   <h1 class="heading">Add New</h1>
 
   <div class="tabs" role="tablist">

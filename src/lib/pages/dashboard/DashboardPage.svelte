@@ -6,6 +6,7 @@
   import { pressDrag } from '../../utils/pressDrag.js';
   import DashboardCard from './DashboardCard.svelte';
   import LinkSlot from './LinkSlot.svelte';
+  import Shards from './Shards.svelte';
   import { navigation } from '../../app/navigation.svelte.js';
   import { shortcuts } from '../../app/shortcuts.svelte.js';
   import { taskCursor } from '../../app/taskCursor.svelte.js';
@@ -104,6 +105,7 @@
 </script>
 
 <main class="dashboard">
+  <Shards />
   <!-- On the same line as the menu button, like the title of a Tasks page. -->
   <h1 class="heading">Dashboard</h1>
 
